@@ -14,6 +14,7 @@ fn urlify<'a>(url: &'a str) -> String {
     return bag.join("").as_str().to_string();
 }
 
+
 #[cfg(test)]
 mod tests {
     use crate::*;
