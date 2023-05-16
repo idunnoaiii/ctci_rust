@@ -24,18 +24,23 @@ mod tests {
 
 fn palindrome_permutation(s1: &str) -> bool {
 
-    let mut dict = HashMap::<char, i32>::new();
+    let mut dict = HashMap::<String, i32>::new();
 
     for char_item in s1.chars() {
-        if char_item != ' ' {
-            if let Some(item) = dict.get_mut(&char_item) {
-                *item -= 1;
-                if *item == 0 {
-                    dict.remove(&char_item);
-                }
-            } else {
-                dict.insert(char_item, 1);
+        if char_item == ' ' {
+            continue;
+        }
+
+        let temp_char = char_item.to_lowercase().to_string();
+
+        if let Some(item) = dict.get_mut(&temp_char) {
+            *item -= 1;
+
+            if *item == 0 {
+                dict.remove(&temp_char);
             }
+        } else {
+            dict.insert(temp_char, 1);
         }
     }
 

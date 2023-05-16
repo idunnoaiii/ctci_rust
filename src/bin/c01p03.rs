@@ -1,3 +1,4 @@
+
 fn urlify<'a>(url: &'a str) -> String {
     let mut bag = Vec::<String>::new();
 
