@@ -1,7 +1,6 @@
 use std::collections::HashSet;
 
 fn all_chars_unique(arr: &str) -> bool {
-
     let mut bag = HashSet::<char>::new();
 
     for char_item in arr.chars().into_iter() {
@@ -16,7 +15,6 @@ fn all_chars_unique(arr: &str) -> bool {
 }
 
 fn all_chars_unique_use_bitwise(arr: &str) -> bool {
-
     if arr.len() > 26 {
         return false;
     }
@@ -33,7 +31,6 @@ fn all_chars_unique_use_bitwise(arr: &str) -> bool {
         }
 
         bit_field |= 1 << pos;
-
     }
 
     return true;
@@ -56,10 +53,7 @@ mod tests {
     }
 }
 
-
 fn main() {
     assert_eq!(all_chars_unique("helo"), true);
     assert_eq!(all_chars_unique_use_bitwise("helo"), true);
 }
-
-

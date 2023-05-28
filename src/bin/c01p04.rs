@@ -21,9 +21,7 @@ mod tests {
     }
 }
 
-
 fn palindrome_permutation(s1: &str) -> bool {
-
     let mut dict = HashMap::<String, i32>::new();
 
     for char_item in s1.chars() {
@@ -46,7 +44,6 @@ fn palindrome_permutation(s1: &str) -> bool {
 
     return dict.len() == 0 || dict.len() == 1;
 }
-
 
 fn main() {
     palindrome_permutation("s1");

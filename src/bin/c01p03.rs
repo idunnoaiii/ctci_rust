@@ -1,4 +1,3 @@
-
 fn urlify<'a>(url: &'a str) -> String {
     let mut bag = Vec::<String>::new();
 
@@ -14,7 +13,6 @@ fn urlify<'a>(url: &'a str) -> String {
 
     return bag.join("").as_str().to_string();
 }
-
 
 #[cfg(test)]
 mod tests {
